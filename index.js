@@ -15,7 +15,13 @@ connection();
 
 // middlewares
 app.use(express.json());
-app.use(cors());
+app.use(cors(
+    {
+        origin: ["https://food-for-good-c8ps.vercel.app"],
+        methods: ["POST", "GET"],
+        credentials: true
+    }
+));
 
 // routes
 app.get("/", (req, res) => res.send("Express on Vercel"));
