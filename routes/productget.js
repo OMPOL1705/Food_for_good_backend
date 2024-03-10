@@ -11,6 +11,7 @@ router.get('/', async (req, res) => {
     }
 
     const products = await Product.find({ category });
+    res.render('index', { product: products });
     res.status(200).json({ products });
   } catch (error) {
     console.error('Error fetching products by category:', error);

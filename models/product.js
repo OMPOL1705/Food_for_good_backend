@@ -19,7 +19,8 @@ const productSchema = new mongoose.Schema({
         required: true
     },
     imageUrl: {
-        type: String // Assuming you're storing image URLs
+        data: Buffer,
+        contentType: String
     }
 }, { collection: 'products' }); // Set the collection name to 'products'
 

@@ -9,7 +9,7 @@ const adminRoutes = require("./routes/admin");
 const adauthRoutes = require("./routes/adauth");
 const productSave = require("./routes/products");
 const productRoutes = require("./routes/productget");
-
+app.set('view engine', 'ejs');
 // database connection
 connection();
 
